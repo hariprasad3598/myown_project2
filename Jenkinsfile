@@ -1,17 +1,5 @@
 pipeline {
     agent any
-    environment {
-         NEXUS_USER    = 'admin'
-        NEXUS_PASSWORD = 'admin'
-        NEXUS_VERSION = 'nexus3'
-        NEXUS_PROTOCOL = 'http'
-        NEXUS_URL = '44.220.134.169:8081'
-        GROUP_ID = 'com.example'
-        REPOSITORY = 'myownproject2'
-        CREDENTIALS_ID = 'nexus_cread'
-        VERSION = '1.0-SNAPSHOT' 
-        ARTIFACT_ID = 'basic-webpage'
-     }
 
     stages {
         stage('Build') {
@@ -21,24 +9,8 @@ pipeline {
         }
         stage('continous upload') {
             steps {
-                nexusArtifactUploader(
-                    nexusVersion: 'NEXUS_VERSION',
-                    protocol: 'http',
-                    nexusUrl: "${NEXUS_URL}",
-                    groupId: "${GROUP_ID}",     
-                    version: "${VERSION}",
-                    repository: "${REPOSITORY}",
-                    credentialsId: "${CREDENTIALS_ID}",
-                    artifacts: [
-                        [
-                            artifactId: "${ARTIFACT_ID}",
-                            classifier: '',
-                            file: 'target/basic-webpage-1.0-SNAPSHOT.war',
-                            type: 'war'
-                        ]
-                    ]
-                )
-
+                 nexusArtifactUploader artifacts: [[artifactId: 'basic-webpage', classifier: '', file: 'target/basic-webpage-1.0-SNAPSHOT.war', type: 'war']], credentialsId: 'nexus_cread', groupId: 'com.example', nexusUrl: '44.220.134.169:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'myownproject2', version: '1.0-SNAPSHOT'    
+            
             }
         }   
     }
