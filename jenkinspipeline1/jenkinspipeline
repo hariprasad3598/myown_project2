@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('continous download ') {
             steps {
-                echo 'Hello World'
+                git 'https://github.com/hariprasad3598/myown_project2.git'
             }
         }
     }
