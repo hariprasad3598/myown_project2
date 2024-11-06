@@ -33,7 +33,7 @@ pipeline {
                         [
                             artifactId: "${ARTIFACT_ID}",
                             classifier: '',
-                            file: "${ARTIFACT_ID}-${VERSION}.war",
+                            file: 'basic-webpage-1.0-SNAPSHOT.war',
                             type: 'war'
                         ]
                     ]
