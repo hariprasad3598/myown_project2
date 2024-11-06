@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('continous download') {
+            steps {
+                echo 'Building...'
+                // Place your build steps here
+            }
+        }
+        
+    }
+}
