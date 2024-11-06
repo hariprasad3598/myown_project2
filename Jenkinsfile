@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
          NEXUS_USER    = 'admin'
-        NEXUS-PASSWORD = 'admin'
+        NEXUS_PASSWORD = 'admin'
         NEXUS_VERSION = 'nexus3'
         NEXUS_PROTOCOL = 'http'
         NEXUS_URL = '107.22.11.112:8081'
