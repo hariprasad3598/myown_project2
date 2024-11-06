@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('continous download') {
             steps {
-                echo 'Building...'
-                // Place your build steps here
+                git 'https://github.com/hariprasad3598/myown_project2.git'
             }
         }
         
