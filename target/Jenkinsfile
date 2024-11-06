@@ -12,9 +12,6 @@ pipeline {
         VERSION = '1.0-SNAPSHOT' 
         ARTIFACT_ID = 'Basic Web Page'
      }
-
-
-
     stages {
         stage('Build') {
             steps {
