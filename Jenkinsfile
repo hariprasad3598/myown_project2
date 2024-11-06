@@ -8,7 +8,7 @@ pipeline {
         NEXUS_URL = '107.22.11.112:8081'
         GROUP_ID = 'com.example'
         REPOSITORY = 'myownproject2'
-        CREDENTIALS_ID = 'nexus_cred'
+        CREDENTIALS_ID = 'nexus_cread'
         VERSION = '1.0-SNAPSHOT' 
         ARTIFACT_ID = 'basic-webpage'
      }
