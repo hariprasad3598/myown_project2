@@ -22,7 +22,7 @@ pipeline {
         stage('continous upload') {
             steps {
                 nexusArtifactUploader(
-                    nexusVersion: 'nexus3',
+                    nexusVersion: 'NEXUS_VERSION',
                     protocol: 'http',
                     nexusUrl: "${NEXUS_URL}",
                     groupId: "${GROUP_ID}",     
