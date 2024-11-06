@@ -5,7 +5,7 @@ pipeline {
         NEXUS_PASSWORD = 'admin'
         NEXUS_VERSION = 'nexus3'
         NEXUS_PROTOCOL = 'http'
-        NEXUS_URL = 'http://44.220.134.169:8081/repository/myownproject2//'
+        NEXUS_URL = 'http://44.220.134.169:8081/repository/myownproject2/'
         GROUP_ID = 'com.example'
         REPOSITORY = 'myownproject2'
         CREDENTIALS_ID = 'nexus_cread'
