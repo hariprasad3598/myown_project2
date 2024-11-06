@@ -10,7 +10,7 @@ pipeline {
         REPOSITORY = 'myownproject2'
         CREDENTIALS_ID = 'nexus_cred'
         VERSION = '1.0-SNAPSHOT' 
-        ARTIFACT_ID = 'Basic Web Page'
+        ARTIFACT_ID = 'basic-webpage'
      }
 
     stages {
